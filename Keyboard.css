@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'SF Compact Display';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Compact Display Medium'), url('/font/sf-compact-display-medium-5864711817c30.woff') format('woff');
+    }
+
+.keyboard{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 10px;
+    /* border: 0.5px solid #ffffff7c; */
+    /* box-shadow: 0 0 50px rgba(255, 255, 255, 0.5); */
+    user-select: none;
+    transition: bottom 0.4s;
+    height: 260px;
+}
+
+h1{
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30pt;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #626166;
+    padding-top:20px;
+}
+
+.keyboard--hidden{
+    bottom: -100%;
+}
+
+.keyboard__keys{
+    text-align: center;
+}
+
+.keyboard__key{
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 100%), #191A1F;
+    border: 2px solid #000000;
+    box-shadow: inset 0px 3px 1px rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+
+    font-family: 'SF Compact Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+}
+
+.keyboard__key:active{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.keyboard__key--wide{
+    width: 12%;
+}
+
+.keyboard__key--extra-wide{
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboard__key--activatable::after{
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key--active::after{
+    background: #fff;
+
+}
+
+.keyboard__key--dark{
+    background: rgba(0,0,0,0.25);
+}
